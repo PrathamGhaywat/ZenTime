@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Button } from "../button";
+import { Input } from "../input";
 
 function FlipDigit({
   value,
@@ -36,10 +37,12 @@ function FlipDigit({
   );
 }
 
-export function Timer() {
-  const initialTime = 5 * 60;
 
-  const [secondsLeft, setSecondsLeft] = useState(initialTime);
+export function Timer() {
+  const [minutesInput, setMinutesInput] = useState("5");
+  const [secondsInput, setSecondsInput] = useState("0");
+
+  const [secondsLeft, setSecondsLeft] = useState(300);
   const [isRunning, setIsRunning] = useState(false);
 
   useEffect(() => {
@@ -67,23 +70,85 @@ export function Timer() {
     .toString()
     .padStart(2, "0");
 
+  function setCustomTime() {
+    const mins = Number(minutesInput);
+    const secs = Number(secondsInput);
+
+    if (
+      minutesInput.trim() === "" ||
+      secondsInput.trim() === "" ||
+      !Number.isInteger(mins) ||
+      !Number.isInteger(secs) ||
+      mins < 0 ||
+      secs < 0 ||
+      secs > 59 ||
+      mins > 5999 ||
+      mins * 60 + secs === 0
+    ) {
+      return;
+    }
+
+    setIsRunning(false);
+    setSecondsLeft(mins * 60 + secs);
+  }
+
   function resetTimer() {
     setIsRunning(false);
-    setSecondsLeft(initialTime);
+    setSecondsLeft(
+      Number(minutesInput) * 60 + Number(secondsInput)
+    );
   }
 
   return (
-    <div className="flex min-h-[70vh] flex-col items-center justify-center gap-10">
-      <h1 className="text-3xl font-bold tracking-tight">
-        Timer
-      </h1>
+    <div className="flex min-h-[70vh] flex-col items-center justify-center gap-8">
+      <h1 className="text-3xl font-bold">Timer</h1>
 
       <div className="flex items-center gap-4 sm:gap-6">
         <FlipDigit value={minutes} label="Minutes" />
-
         <span className="mb-8 text-4xl font-bold">:</span>
-
         <FlipDigit value={seconds} label="Seconds" />
+      </div>
+
+      <div className="flex items-end gap-3">
+        <div className="grid gap-2">
+          <label htmlFor="minutes" className="text-sm">
+            Minutes
+          </label>
+          <Input
+            id="minutes"
+            type="number"
+            min="0"
+            max="5999"
+            value={minutesInput}
+            disabled={isRunning}
+            onChange={(e) => setMinutesInput(e.target.value)}
+            className="w-24"
+          />
+        </div>
+
+        <div className="grid gap-2">
+          <label htmlFor="seconds" className="text-sm">
+            Seconds
+          </label>
+          <Input
+            id="seconds"
+            type="number"
+            min="0"
+            max="59"
+            value={secondsInput}
+            disabled={isRunning}
+            onChange={(e) => setSecondsInput(e.target.value)}
+            className="w-24"
+          />
+        </div>
+
+        <Button
+          variant="outline"
+          onClick={setCustomTime}
+          disabled={isRunning}
+        >
+          Set Time
+        </Button>
       </div>
 
       <div className="flex gap-3">
