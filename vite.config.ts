@@ -14,7 +14,7 @@ export default defineConfig(() => ({
     alias: {
       "@": path.resolve(__dirname)
     }
-  }
+  },
 
   // Vite options tailored for Tauri development and only applied in `tauri dev` or `tauri build`
   //
