@@ -100,7 +100,7 @@ export function Timer() {
   }
 
   return (
-    <div className="flex min-h-[70vh] flex-col items-center justify-center gap-8">
+    <div className="flex flex-col items-center justify-center gap-8">
       <h1 className="text-3xl font-bold">Timer</h1>
 
       <div className="flex items-center gap-4 sm:gap-6">
