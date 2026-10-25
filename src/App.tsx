@@ -6,7 +6,7 @@ import "./App.css"
 
 function App() {
   return (
-    <div className="min-h-dvh bg-background text-foreground">
+    <div className="min-h-dvh scrollbar-hide bg-background text-foreground">
       <header className="flex items-center justify-end px-4 py-2">
         <ModeToggle />
       </header>
