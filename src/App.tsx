@@ -1,7 +1,7 @@
 import { ModeToggle } from "./ui/components/mode-toggle";
 import { Timer } from "./ui/components/Timer";
 import { TodoList } from "./ui/components/TodoList";
-import { MusicPlayer } from "./ui/components/MusicPlayer";
+import { MusicHub } from "./ui/components/MusicHub";
 import "./App.css"
 
 function App() {
@@ -22,8 +22,8 @@ function App() {
           </div>
         </section>
 
-        <section className="h-[400px] min-h-[400px] w-full">
-          <MusicPlayer />
+        <section className="min-h-100 w-full">
+          <MusicHub />
         </section>
       </main>
     </div>
