@@ -1,5 +1,5 @@
-import { resampleLevels } from "@/lib/audio/bands";
-import { clamp } from "@/lib/audio/decibels";
+import { resampleLevels } from "./bands";
+import { clamp } from "./decibels";
 
 const RELEASE_PER_FRAME = 0.86;
 const FRAME_MS = 16.67;

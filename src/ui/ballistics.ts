@@ -1,4 +1,4 @@
-import { dbToGain, gainToDb } from "@/lib/audio/decibels";
+import { dbToGain, gainToDb } from "./decibels";
 
 /** How a meter moves between readings. All times are in milliseconds. */
 export interface BallisticsOptions {

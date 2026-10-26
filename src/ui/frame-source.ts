@@ -1,4 +1,4 @@
-import type { FrameSource } from "@/lib/audio/types";
+import type { FrameSource } from "./types";
 
 export interface FrameEmitter<T> extends FrameSource<T> {
   /** Sends a frame to every subscriber. */

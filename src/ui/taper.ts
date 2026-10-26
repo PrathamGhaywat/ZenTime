@@ -1,5 +1,5 @@
-import { clamp, DEFAULT_MIN_DB } from "@/lib/audio/decibels";
-import type { Taper } from "@/lib/audio/types";
+import { clamp, DEFAULT_MIN_DB } from "./decibels";
+import type { Taper } from "./types";
 
 const DEFAULT_FADER_MAX_DB = 6;
 const DEFAULT_UNITY_POSITION = 0.75;

@@ -2,7 +2,7 @@
 
 import { useEffect, useEffectEvent } from "react";
 
-import type { FrameSource } from "@/lib/audio/types";
+import type { FrameSource } from "./types";
 
 export interface UseFrameSourceOptions {
   /** Pause the subscription without unmounting. Default true. */

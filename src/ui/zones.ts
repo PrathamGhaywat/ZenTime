@@ -1,4 +1,4 @@
-import type { MeterZone, MeterZoneName } from "@/lib/audio/types";
+import type { MeterZone, MeterZoneName } from "./types";
 
 /** Green below −20 dBFS, amber from −20, red from −9: the thresholds streamers know. */
 export const DEFAULT_ZONES: MeterZone[] = [

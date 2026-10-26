@@ -1,5 +1,5 @@
-import { clamp } from "@/lib/audio/decibels";
-import type { VisualFrame } from "@/lib/audio/types";
+import { clamp } from "./decibels";
+import type { VisualFrame } from "./types";
 
 interface HistorySample {
   frame: VisualFrame;

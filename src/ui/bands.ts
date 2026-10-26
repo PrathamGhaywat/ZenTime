@@ -1,4 +1,4 @@
-import { clamp } from "@/lib/audio/decibels";
+import { clamp } from "./decibels";
 
 /** `AnalyserNode.minDecibels` default. */
 export const SPECTRUM_MIN_DB = -100;

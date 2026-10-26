@@ -3,15 +3,15 @@
 import { useCallback, useEffect, useImperativeHandle, useRef } from "react";
 import type { ComponentProps, Ref } from "react";
 
-import { useAudioConfig } from "@/hooks/use-audio-config";
-import { useFrameSource } from "@/hooks/use-frame-source";
-import { useReducedMotion } from "@/hooks/use-reduced-motion";
-import { useVisibility } from "@/hooks/use-visibility";
-import { createBarLevels } from "@/lib/audio/bar-levels";
-import type { BarIdle } from "@/lib/audio/bar-levels";
-import { clamp } from "@/lib/audio/decibels";
-import { subscribeFrame } from "@/lib/audio/frame-loop";
-import type { FrameSource, Orientation, VisualFrame } from "@/lib/audio/types";
+import { useAudioConfig } from "./use-audio-config";
+import { useFrameSource } from "./use-frame-source";
+import { useReducedMotion } from "./use-reduced-motion";
+import { useVisibility } from "./use-visibility";
+import { createBarLevels } from "./bar-levels";
+import type { BarIdle } from "./bar-levels";
+import { clamp } from "./decibels";
+import { subscribeFrame } from "./frame-loop";
+import type { FrameSource, Orientation, VisualFrame } from "./types";
 import {
   ELECTRIC_CANVAS_CLASS,
   ELECTRIC_GLOW_CLASS,
@@ -24,13 +24,13 @@ import {
   moveSparks,
   readElectricColors,
   strokeSparks,
-} from "@/lib/electric";
+} from "./electric";
 import type {
   ElectricCanvasSize,
   ElectricColors,
   ElectricSparks,
-} from "@/lib/electric";
-import { cn } from "@/lib/utils";
+} from "./electric";
+import { cn } from "./utils";
 
 const DEFAULT_BAR_COUNT = 16;
 const DEFAULT_MIN_LEVEL = 0.08;

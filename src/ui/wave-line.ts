@@ -1,6 +1,6 @@
-import { createBarLevels } from "@/lib/audio/bar-levels";
-import { clamp } from "@/lib/audio/decibels";
-import type { VisualFrame } from "@/lib/audio/types";
+import { createBarLevels } from "./bar-levels";
+import { clamp } from "./decibels";
+import type { VisualFrame } from "./types";
 
 const MS_PER_SECOND = 1000;
 const FRAME_MS = 16.67;

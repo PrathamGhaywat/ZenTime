@@ -1,4 +1,4 @@
-import { getSharedAudioContext } from "@/hooks/use-audio-context";
+import { getSharedAudioContext } from "./use-audio-context";
 
 export interface ClickSoundParams {
   /** A ring: a sine at `hz` that fades over `decayMs`. */

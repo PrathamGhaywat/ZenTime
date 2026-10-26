@@ -1,4 +1,4 @@
-import type { VisualFrame } from "@/lib/audio/types";
+import type { VisualFrame } from "./types";
 
 export const appendHistory = (
   frame: VisualFrame,

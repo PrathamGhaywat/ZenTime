@@ -3,8 +3,8 @@
 import { createContext, useContext, useMemo } from "react";
 import type { ReactNode } from "react";
 
-import type { BallisticsInput } from "@/lib/audio/ballistics";
-import type { MeterZone, Orientation } from "@/lib/audio/types";
+import type { BallisticsInput } from "./ballistics";
+import type { MeterZone, Orientation } from "./types";
 
 export type AudioSize = "sm" | "default" | "lg";
 
