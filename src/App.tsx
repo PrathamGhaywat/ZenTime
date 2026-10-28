@@ -1,8 +1,8 @@
 import { ModeToggle } from "./ui/components/mode-toggle";
 import { Timer } from "./ui/components/Timer";
 import { TodoList } from "./ui/components/TodoList";
-import { MusicHub } from "./ui/components/MusicHub";
 import "./App.css"
+import { MusicPlayer } from "./ui/components/MusicPlayer";
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
         </section>
 
         <section className="min-h-100 w-full">
-          <MusicHub />
+          <MusicPlayer />
         </section>
       </main>
     </div>
