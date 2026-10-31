@@ -1,10 +1,10 @@
+
 name: Release
 
 on:
   push:
     tags:
       - "v*"
-  workflow_dispatch:
 
 permissions:
   contents: write
@@ -77,6 +77,27 @@ jobs:
           path: release-assets
           merge-multiple: true
 
+      - name: Collect installer packages only
+        run: |
+          mkdir -p release-packages
+
+          find release-assets -type f \( \
+            -iname '*.exe' -o \
+            -iname '*.msi' -o \
+            -iname '*.dmg' -o \
+            -iname '*.appimage' -o \
+            -iname '*.deb' -o \
+            -iname '*.rpm' \
+          \) -exec cp {} release-packages/ \;
+
+          echo "Release packages:"
+          ls -lh release-packages/
+
+          if [ -z "$(ls -A release-packages)" ]; then
+            echo "ERROR: No installer packages found!"
+            exit 1
+          fi
+
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
@@ -86,4 +107,4 @@ jobs:
           draft: false
           prerelease: false
           files: |
-            release-assets/**/*
+            release-packages/*
