@@ -1,6 +1,6 @@
 [package]
 name = "zentime"
-version = "0.1.0"
+version = "0.1.1"
 description = "Timer, todo, music player, calendar and world clocks the Zen way"
 authors = ["you"]
 edition = "2024"
