@@ -1,5 +1,5 @@
 # ZenTime - The timer meant for you
-ZenTime is a timer app that allows you to use a timer, todo, musisc player, calendar and see the time around the world efficently then ever using a calm and simple UI. The app itself is super tiny and minuscle aswell as opensource, so data never leaves your device.
+ZenTime is a timer app that allows you to use a timer, todo, music player, calendar and see the time around the world efficently then ever using a calm and simple UI. The app itself is super tiny and minuscle aswell as opensource, so data never leaves your device.
 
 ## Installing
 The app is built in Tauri and React using Rust and Bun, which makes it's binary small and effecient. 
