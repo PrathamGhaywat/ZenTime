@@ -25,16 +25,6 @@ function readClocks(): Clock[] {
   }
 }
 
-function getTime(timeZone: string) {
-  return new Intl.DateTimeFormat(undefined, {
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-    hour12: false,
-    timeZone,
-  }).format(new Date());
-}
-
 function getDate(timeZone: string) {
   return new Intl.DateTimeFormat(undefined, {
     weekday: "long",
