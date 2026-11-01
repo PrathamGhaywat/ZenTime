@@ -13,6 +13,8 @@ Please note that the app isn't signed for any platform so there maybe warnings s
 When windows defender tries to warn you, you have to click on More options / the ... dots and click on run anyway. Once the installation is complete, you will be able to run the app after installation without any warnings.
 
 #### MacOS:
+Instructions may vary!
+
 ZenTime isn't signed and notarized with Apple Developer ID, so macOS Gatekeeper will prevent the application from opening and may say that this app is damaged and can't open.
 
 > "ZenTime is damaged and can't be opened. You should move it to the Bin."
